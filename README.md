@@ -1,1 +1,1 @@
-Open `splash-screen.html` to run the code.
+Open `splash.html` to run the code.
