@@ -1,0 +1,223 @@
+/* style.css */
+
+* {
+  font-family: 'San Fransisco Pro';
+  font-size: 18px;
+}
+
+body {
+  /* background: linear-gradient(to bottom, #003973, #E5E5BE); */
+  background: linear-gradient(to bottom, #E3EEF7, #F4F6F8);
+  color: #00ace6;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #004466;
+  text-align: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 18px;
+  transition: color 0.40s, transform 0.35s;
+}
+
+nav a:hover {
+  color: #00ace6;
+  transform: scale(1);
+}
+
+/* Footer */
+footer {
+  background: #004466;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: block;
+}
+footer p, footer a{
+  display: inline;
+  font-size: 15px;
+  white-space: pre;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+}
+footer a:hover{
+  color: #0056b3;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 200px;
+  background: #004466; /* Sidebar background */
+  color: white;
+  padding: 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  margin-right: 20px;
+  position: sticky;
+  top: 175px;
+  height: 300px;
+  overflow-y: auto;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+  display: block;
+  width: 100%; /* Make links full width */
+}
+
+.sidebar a:hover {
+  color: #00ace6;
+  transform: scale(1);
+}
+
+.main-title {
+  text-align: left; /* Align title to left */
+  width: 100%;
+  margin: 1rem auto;
+  color: #00ace6; /* Light blue for title */
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: stretch; /* Make cards stretch to container width */
+  background: #E3EEF7;  /* White background for container */
+  color: #333;  /* Set default text color to dark gray */
+  border-radius: 15px; /* Round the container */
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.180);
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0; /* Vertical spacing between cards */
+  padding: 1rem;
+  width: 100%; /* Take full width */
+  box-sizing: border-box; /* Makes padding and border included in the element's total width and height */
+}
+
+.card h1,
+.card h2,
+.card h3 {
+  color: #0077b6;
+  text-align: left; /* Align card heading to the left */
+}
+
+.card img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #0077b6;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+
+.top-btn:hover {
+  background: #005f99;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* ==========================================================================
+Mobile Responsiveness
+========================================================================== */
+
+@media (max-width: 768px) {
+
+  main {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      overflow-y: hidden;
+      justify-content: space-around;
+  }
+
+  .container {
+      width: 100%;
+      padding: 0.5rem;
+      margin-left: 0;
+  }
+
+  .card {
+      width: 100%;
+      margin: 0.5rem 0;
+  }
+
+  .card img {
+      width: 100%;
+  }
+
+  .main-title {
+      font-size: 1.8rem;
+  }
+}
